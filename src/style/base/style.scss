@@ -1,0 +1,16 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+*{
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+.container{
+    width: calc(100vw - 200px);
+    margin: 0 auto;
+    max-width: 1300px;
+}
