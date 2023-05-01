@@ -1,14 +1,13 @@
-import HeaderContact from "../components/HeaderContact"
-
-
+import HeaderTop from "../components/HeaderTop";
+import Header from "../components/Header";
+import Banner from "../components/Banner";
 
 const HomePage = () => {
   return (
     <>
-  
-    <HeaderContact/>
-    
-   
+    <HeaderTop/>
+    <Header/>
+    <Banner/>
     </>
   )
 }

@@ -1,0 +1,55 @@
+.banner{
+    width: 100%;
+    height: auto;
+    position: relative;
+    img{
+        width: 100%;
+    }
+    .banner-title{
+        position: absolute;
+        left: 100px;
+        bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        h1,h2,h3{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            color:#fff;
+            font-size: 14px;
+        }
+        h2{
+            width: 330px;
+            font-size: 52px;
+            color: #71cd14;
+            span{
+                color: #fff;
+            }
+        }
+        h3{
+            color:#fff;
+            font-size: 18px;
+            font-weight: 300;  
+        }
+        button{
+            width: 170px;
+            background-color: #71cd14;
+            color: #fff;
+            padding: 15px 0;
+            border: 1px solid #71cd14;
+            outline: none;
+            cursor: pointer;
+            font-size: 12px;
+    font-weight: 500;
+    transition: all 300ms linear 0s;
+    border-radius: 8px;
+   
+    &:hover{
+        background: transparent;
+        color: rgb(113, 205, 20);
+    }
+        }
+    }
+}

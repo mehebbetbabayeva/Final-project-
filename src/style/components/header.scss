@@ -1,0 +1,118 @@
+header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    z-index: 5;
+    .header-content{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .header-logo{
+            img{
+                object-fit: cover;
+            }
+        }
+        nav,.icon-nav{ 
+            ul{
+                margin: 0;
+                padding: 0;
+                display: flex;
+                li{
+                    a{
+                        color: #2A2A2A;
+                        
+                            &:hover{
+                                transition: 0.6s ease;
+                                color: #71cd14;
+                            }
+                        
+                    }
+                }
+            }
+        }
+        nav{
+            ul{
+                gap: 50px;
+                
+                .shop{
+                    position: relative;
+                    &:hover .shop-menu{
+                        visibility: visible;
+                        transition: all .5s;
+                        opacity: 1; 
+                        position: absolute;
+                        left: 20px;
+                        top: 40px;  
+                    }
+                }
+                .blog{
+                    position: relative;
+                    &:hover .blog-menu{
+                        visibility: visible;
+                        transition: all .5s;
+                        opacity: 1; 
+                        position: absolute;
+                        left: 20px;
+                        top: 40px;
+                    }
+                }
+                .page{
+                    position: relative;
+                    &:hover .page-menu{
+                        visibility: visible;
+                        transition: all .5s;
+                        opacity: 1; 
+                        position: absolute;
+                        left: 20px;
+                        top: 40px;
+                    } 
+                }
+                .shop-menu , .blog-menu , .page-menu{                    
+                    background-color: #fff;
+                    position: absolute;
+                    left: 20px;
+                    top: 80px;
+                    margin: 0;
+                    padding: 0 ;
+                    gap: 0;
+                    display: flex;
+                    flex-direction: column;
+                    width: 200px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all .5s;                  
+                    li{
+                        margin: 0;
+                        padding: 15px ;
+                        width: 100%;
+                        border-bottom: 1px solid #b8b3b3;
+                        a{
+                            color: #2A2A2A;
+                        }
+                        &:hover{
+                            transition: 0.8s ;
+                            background-color: #71cd14;
+                        }
+                        &:hover a{
+                            transition: 0.1s ;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        .icon-nav{
+            ul{
+                gap: 20px;
+                li{
+                    a{
+                        font-size: 20px;   
+                    }
+                }
+            }
+        }
+    }
+}

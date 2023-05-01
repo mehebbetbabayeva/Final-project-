@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const HeaderContact = () => {
   return (
-    <header>
+    <div className="header-top">
        <div className="container">
           <div className="header-content">
              <div className="header-content-item1">
@@ -17,7 +17,7 @@ const HeaderContact = () => {
           </div>
        </div>
        
-    </header>
+    </div>
   )
 }
 
