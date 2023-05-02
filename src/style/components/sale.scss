@@ -1,0 +1,35 @@
+.sale{
+    width: 100%;
+    position: relative;
+    img{
+        width: 100%;
+    }
+    .sale-title{
+        position: absolute;
+        bottom: 50px;
+        right: 200px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+        h1,h2,h3{
+            margin: 0;
+            padding: 0;
+        }
+        h2{
+            font-size: 24px;
+            color: #4a4a4a;
+        }
+        h1{
+            font-size: 100px;
+            color: #2a2a2a;
+        }
+       h3{
+        font-size: 14px;
+        color: #797979;
+        font-weight: 200;
+       }
+       
+        
+    }
+}

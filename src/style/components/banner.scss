@@ -33,23 +33,6 @@
             font-size: 18px;
             font-weight: 300;  
         }
-        button{
-            width: 170px;
-            background-color: #71cd14;
-            color: #fff;
-            padding: 15px 0;
-            border: 1px solid #71cd14;
-            outline: none;
-            cursor: pointer;
-            font-size: 12px;
-    font-weight: 500;
-    transition: all 300ms linear 0s;
-    border-radius: 8px;
-   
-    &:hover{
-        background: transparent;
-        color: rgb(113, 205, 20);
-    }
-        }
+        
     }
 }
