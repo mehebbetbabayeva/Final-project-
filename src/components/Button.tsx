@@ -4,7 +4,7 @@ interface ButtonProps {
 
 const Button = (props: ButtonProps) => {
   return (
-    <button>
+    <button className="green-btn">
         {props.text}
     </button>
   )

@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Banner from "../components/Banner";
 import Features from "../components/Features";
 import Sale from "../components/Sale";
+import Footer from "../components/Footer";
 
 
 const HomePage = () => {
@@ -13,6 +14,7 @@ const HomePage = () => {
     <Banner/>
     <Features/>
     <Sale/>
+    <Footer/>
     </>
   )
 }

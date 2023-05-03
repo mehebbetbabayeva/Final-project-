@@ -1,0 +1,117 @@
+footer{
+    width: 100%;
+    background: #0d0d1f;
+    .footer-content{
+        width: 100%;
+        padding:50px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        .footer-features{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            h1{
+                color: #fff;
+                font-size: 18px;
+            }
+            a,h2{
+                color: #797979;
+            }
+            a{
+                &:hover{
+                    transition: all 300ms linear 0s;
+                    color: #fff;
+                }
+            }           
+            .footer-card-group{
+                width: 80%;
+                display: flex;
+                justify-content: space-between;
+                .footer-card{
+                    width: 160px;                   
+                    ul{
+                        padding: 0;
+                        width: 100%;
+                 
+                        flex-direction: column; 
+                        display: flex;
+                        align-items: flex-end;
+                        li{
+                            padding: 10px 0;
+                            width: 100%;
+                             
+                        }
+                    }
+                }
+            }
+            .footer-email{
+               display:flex;
+               flex-direction: column;
+               gap: 20px;
+               h2{
+                margin: 0;
+                padding: 0;
+                font-size: 14px;
+               }
+               form{
+                width:80%;
+                background: rgba(255,255,255,0.15);
+                position: relative;
+                input{
+                   background:none;
+                   color: #ffffff;
+                   width:80%;
+                   outline: none;
+                   font-size: 14px;
+                   padding:15px  10px;
+                   border:none;
+                }
+                button{
+                    position: absolute;
+                    top: 5px;
+                    right: -60px;
+                    padding: 10px;
+                    border:none;
+                    width: 100px;
+                    cursor: pointer;
+                    transition: all 300ms linear 0s;
+                    background: #71cd14;
+                    color: #ffffff;
+
+                    &:hover{
+                        opacity:.8;
+                    }
+               }
+            }
+        }
+    }
+    .footer-social{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        p{
+            color: #fff;
+            span{
+                color: #71cd14;
+            }
+        }
+        .social-group{
+            display: flex;
+            gap: 10px;
+            i{
+                display: flex;
+                justify-content: center;
+            align-items: center;
+                margin: 0;
+                font-size: 20px;
+                width: 40px;
+                height: 40px;
+                background: #ffffff26;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+}}
