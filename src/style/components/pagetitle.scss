@@ -1,0 +1,26 @@
+.page-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    min-height: 200px;
+    background: #f6f6f6;
+    .ttile-name{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        h1{
+            font-size: 27px;
+            color: #2a2a2a;
+        }
+        p{
+            font-size: 14px;
+            color: #797979;
+        }
+    }
+    .title-link{
+        a{
+            font-size: 14px;
+            color: #797979; 
+        }
+    }
+}
