@@ -2,25 +2,37 @@
     width: 100%;
     padding: 15px 0;
     background: #f6f6f6;
+    
     .header-content{
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-between; 
+        justify-content: space-between;
         a{
-            padding: 0 19px;
+            
             color: #4a4a4a;
             font-size: 11px;
         }
         .header-content-item1>a{
             &:first-child{
+                padding-right: 19px;
                 border-right: 1px solid #4a4a4a;
+            }
+            &:nth-child(2){
+                padding: 0 19px;
             }
         }
         .header-content-item2>a{
+            &:first-child{
+                padding-right: 19px; 
+            }
             &:nth-child(2){
+                padding: 0 19px;
                 border-right: 1px solid #4a4a4a;
                 border-left: 1px solid #4a4a4a;
+            }
+            &:last-child{
+                padding-left: 19px;
             }
             &:hover{
                 transition: .3s ease ;

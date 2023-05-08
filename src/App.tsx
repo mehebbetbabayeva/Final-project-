@@ -1,18 +1,22 @@
+import HeaderTop from "./components/HeaderTop";
+import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
-import { Routes,Route } from "react-router-dom";
 import GiftCard from "./pages/GiftCard";
-import TrackOrder from "./pages/TrackOrder";
-import ContactUs from "./pages/ContactUs";
+import Footer from "./components/Footer";
+import { Routes,Route } from "react-router-dom";
+
+
 
 function App() {
   return (
     <div className="App">
-        <HomePage/>
+       <HeaderTop/>
+       <Header/>
         <Routes>
+        <Route path="/" element={<HomePage />} />
         <Route path="/gift-card" element={<GiftCard />} />
-        <Route path="/track-order" element={<TrackOrder />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-      </Routes>
+       </Routes>
+       <Footer/>
     </div>
   );
 }

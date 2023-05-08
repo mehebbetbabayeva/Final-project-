@@ -1,8 +1,13 @@
-import React from 'react'
+import PageTitle from "../components/PageTitle";
+import ProductPrice from "../components/ProductPrice";
+
 
 const GiftCard = () => {
   return (
-    <div>GiftCard</div>
+    <>
+      <PageTitle text="Cart" />
+      <ProductPrice/>
+    </>
   )
 }
 
