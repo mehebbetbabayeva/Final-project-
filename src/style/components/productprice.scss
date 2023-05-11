@@ -3,6 +3,7 @@
     .product-price-content{
         width: 100%;
         table{
+            margin-top: 50px;
             width: 100%; 
             border-collapse: collapse;
             th{
@@ -79,18 +80,61 @@
             }  
             .coupon-code{
                 display: flex;
+                margin-left: -446px;
                 input{
                     width: 200px;
                     padding: 0px 15px;
                     border-radius: 3px;
                     border: 1px solid #eeeeee;
-                    height: 40px;
+                    height: 50px;
                     font-size: 14px;
                     color: #cccccc;
                     outline: none;
                 }
-                
+                .close-coupon{
+                    width: 200px;
+                    height: 50px;
+                    background-color: #eeeeee;
+                    color: black;
+                    border: 1px solid #eeeeee;
+                    outline: none;
+                    cursor: pointer;
+                }
             } 
+            h5{
+                color: #2a2a2a;
+                font-size: 14px;
+            }
+            .shopping-area{
+                
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    span{
+                        label{
+                            cursor: pointer;
+                        }
+                        color: #797979;
+                        
+                    }
+                    select{
+                        background: #f6f6f6;
+                        border: 1px solid #eeeeee;
+                        height: 40px;
+                        margin-bottom: 20px;
+                        cursor: pointer;
+                        border-radius: 5px;
+                        outline: none;
+                        option{
+                            display: block;
+                             
+                             min-height: 1.2em;
+                            padding: 0px 2px 1px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
