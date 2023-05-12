@@ -1,8 +1,25 @@
 import {IoIosArrowUp,IoIosArrowDown} from "react-icons/io";
 import card1 from "../assets/img/cart-1.jpg.webp";
 import Button from "../components/Button";
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import { useState } from "react";
+import TextField from '@mui/material/TextField';
+
+
+
  
 const ProductPrice = () => {
+  const [state, setState] = useState('');
+  const handleChange = (event: SelectChangeEvent) => {
+    setState(event.target.value as string);
+  };
   return (
     <div className="product-price">
         <div className="container">
@@ -91,37 +108,7 @@ const ProductPrice = () => {
                       <td><h5>Subtotal</h5></td>
                       <td><h5>$210.00</h5></td>
                      </tr>
-                     <tr>
-                      <td></td>
-                      <td></td>
-                      <td><h5>Shipping</h5></td>
-                      <td className="shopping-area">
-                          <form action="">
-                           <span>
-                            <label htmlFor="">Flat Rate: $5.00</label>
-                            <input type="radio" name="price" id="" />
-                           </span>
-                           <span>
-                            <label htmlFor="">Free Shipping</label>
-                            <input type="radio" name="price" id="" />
-                           </span>
-                           <span>
-                            <label htmlFor="">Flat Rate: $10.00</label>
-                            <input type="radio" name="price" id="" />
-                           </span>
-                           <span>
-                            <label htmlFor="">Local Delivery: $2.00</label>
-                            <input type="radio" name="price" id="" />
-                           </span>
-                           <select name="country"  >
-                           <option value="">Select a State</option> 
-                           <option value="Azerbaijan">Azerbaijan</option>
-                           <option value="Turkey">Turkey</option>
-                           <option value="Pakistan">Pakistan</option>
-                           </select>
-                          </form>
-                      </td>
-                     </tr>
+                    
                    </tbody>
                 </table>
             </div>
