@@ -2,6 +2,15 @@ import PageTitle from "../components/PageTitle";
 import Button from "../components/Button";
 import {AiOutlineHome} from "react-icons/ai";
 import {BsPhone  , BsEnvelopeAt} from "react-icons/bs";
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import HouseIcon from '@mui/icons-material/House';
+import PhoneIcon from '@mui/icons-material/Phone';
+import EmailIcon from '@mui/icons-material/Email';
+import Divider from '@mui/material/Divider';
 const ContactUs = () => {
   return (
     <>
@@ -20,27 +29,40 @@ const ContactUs = () => {
               <Button text="SEND MESSAGE"/>
             </form>
             <div className="contact">
-                <div>
-                 <i> <AiOutlineHome/></i>
-                  <span>
-                    <h5>Buttonwood, California.</h5>
-                    <h6>Rosemead, CA 91770</h6>
-                  </span>
-                </div>
-                <div>
-                 <i> <BsPhone/></i>
-                  <span>
-                    <a href="tel:00(440)9865562">00 (440) 9865 562</a>
-                    <h6>Mon to Fri 9am to 6pm</h6>
-                  </span>
-                </div>
-                <div>
-                 <i><BsEnvelopeAt/></i> 
-                  <span>
-                    <a href="emailto:support@colorlib.com">support@colorlib.com</a>
-                    <h6>Send us your query anytime!</h6>
-                  </span>
-                </div>
+                 <List
+      sx={{
+        width: '100%',
+        maxWidth: 360,
+        bgcolor: 'background.paper',
+      }}
+    >
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <HouseIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Buttonwood, California." secondary="Rosemead, CA 91770" />
+      </ListItem>
+      <Divider variant="inset" component="li" />
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <PhoneIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="00 (440) 9865 562" secondary="Mon to Fri 9am to 6pm" />
+      </ListItem>
+      <Divider variant="inset" component="li" />
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <EmailIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="support@colorlib.com" secondary="Send us your query anytime!" />
+      </ListItem>
+    </List>
             </div>
           </div>
         </div>

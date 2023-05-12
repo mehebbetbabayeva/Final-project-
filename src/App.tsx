@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import { Routes,Route } from "react-router-dom";
 import TrackOrder from "./pages/TrackOrder";
 import ContactUs from "./pages/ContactUs";
+import ShopCategory from "./pages/ShopCategory";
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/shopping-card" element={<GiftCard />} />
         <Route path="/track-order" element={<TrackOrder />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/shop-category" element={<ShopCategory />} />
        </Routes>
        <Footer/>
     </div>

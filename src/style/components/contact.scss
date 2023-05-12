@@ -35,38 +35,9 @@
             }
         }
         .contact{
-            margin-left: 30px;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 20px;
-            height: 400px;
-            div{
-                display: flex;
-                gap: 10px;
-                align-items: center;
-                i{
-                   font-size: 30px;
-                   color: #797979;
-                }
-                span{
-                    display: flex;
-                    flex-direction: column;
-                    gap: 10px;
-                    h5,h6{
-                        margin: 0;
-                        padding: 0;
-                        font-size: 16px;
-                    }
-                    h5,a{
-                        font-weight: 500;
-                        color: #2a2a2a;
-                    }
-                    h6{
-                        color: #999999;
-                    }
-                }
-            }
+            align-items: center;          
+            height: 400px;           
         }
     }
 }
