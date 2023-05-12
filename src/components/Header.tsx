@@ -17,22 +17,22 @@ const Header = () => {
   })}>HOME</NavLink></li>
               <li className="shop"> <NavLink to="/shop">SHOP</NavLink>
               <ul className="shop-menu">
-                <li><NavLink to="">SHOP CATEGORY</NavLink></li>
-                <li><NavLink to="">PRODUCT DETAILS</NavLink></li>
-                <li><NavLink to="">PRODUCT CHECKOUT</NavLink></li>
-                <li><NavLink to="">SHOPPING CART</NavLink></li>
+                <li><Link to="">SHOP CATEGORY</Link></li>
+                <li><Link to="">PRODUCT DETAILS</Link></li>
+                <li><Link to="">PRODUCT CHECKOUT</Link></li>
+                <li><Link to="/shopping-card">SHOPPING CART</Link></li>
               </ul>
               </li>
               <li className="blog"><NavLink to="">BLOG</NavLink>
               <ul className="blog-menu">
-                <li><NavLink to="">BLOG</NavLink></li>
-                <li><NavLink to="">BLOG DETAILS</NavLink></li>
+                <li><Link to="">BLOG</Link></li>
+                <li><Link to="">BLOG DETAILS</Link></li>
               </ul>
               </li>
               <li className="page"> <NavLink to="/pages">PAGES</NavLink>
               <ul className="page-menu">
-                <li><NavLink to="">TRACKING</NavLink></li>
-                <li><NavLink to="">ELEMENTS</NavLink></li>
+                <li><Link to="">TRACKING</Link></li>
+                <li><Link to="">ELEMENTS</Link></li>
               </ul>
               </li>
               <li><NavLink to="/contact">CONTACT</NavLink></li>
