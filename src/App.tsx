@@ -7,6 +7,7 @@ import { Routes,Route } from "react-router-dom";
 import TrackOrder from "./pages/TrackOrder";
 import ContactUs from "./pages/ContactUs";
 import ShopCategory from "./pages/ShopCategory";
+import ProductDetail from "./pages/ProductDetail";
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/track-order" element={<TrackOrder />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/shop-category" element={<ShopCategory />} />
+        <Route path="/product-detail" element={<ProductDetail />} />
        </Routes>
        <Footer/>
     </div>

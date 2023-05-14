@@ -18,7 +18,7 @@ const Header = () => {
               <li className="shop"> <NavLink to="/shop">SHOP</NavLink>
               <ul className="shop-menu">
                 <li><Link to="/shop-category">SHOP CATEGORY</Link></li>
-                <li><Link to="">PRODUCT DETAILS</Link></li>
+                <li><Link to="/product-detail">PRODUCT DETAILS</Link></li>
                 <li><Link to="">PRODUCT CHECKOUT</Link></li>
                 <li><Link to="/shopping-card">SHOPPING CART</Link></li>
               </ul>

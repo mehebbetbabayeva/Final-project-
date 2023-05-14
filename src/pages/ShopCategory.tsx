@@ -5,7 +5,8 @@ const ShopCategory = () => {
   return (
     <>
         <PageTitle text="Shop Category"/>
-        <ShopProduct/>
+        <ShopProduct />
+        
     </>
   )
 }
