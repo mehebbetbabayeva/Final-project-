@@ -5,12 +5,14 @@
     padding: 15px 0;
     border: 1px solid #71cd14;
     outline: none;
-cursor: pointer;
-font-size: 12px;
+   cursor: pointer;
+   font-size: 12px;
 font-weight: 500;
 transition: all 300ms linear 0s;
 border-radius: 8px;
-
+display: flex;
+align-items: center;
+justify-content: center;
 &:hover{
 background: transparent;
 color: rgb(113, 205, 20);
