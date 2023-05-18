@@ -1,28 +1,19 @@
 import { useState } from "react";
-import {login} from "../firebase";
+import {register} from "../firebase";
 import { Toaster } from 'react-hot-toast';
 import { TextField, Button } from "@mui/material";
-import { useDispatch } from "react-redux/es/exports";
-import {login as loginHandle} from "../store/auth";
-import { useNavigate } from "react-router-dom";
-const Login = () => {
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
-    const [email,setEmail]=useState('');
-    const [password,setPassword] = useState('');
-    const handleSubmit =async( e:any) =>{
-      e.preventDefault()
-        const user = await login (email,password)
-        dispatch(loginHandle(user))
-        navigate('/',{
-            replace:true
-        })
-    }
- 
-    
+import { Link } from "react-router-dom";
 
-   
-    
+const Register = () => {
+ 
+  const [email,setEmail]=useState('');
+  const [password,setPassword] = useState('');
+  const handleSubmit =async( e:any) =>{
+    e.preventDefault()
+      const user = await register (email,password)
+      console.log(user)
+
+  }
   return (
     <div>
     <Toaster />
@@ -31,7 +22,7 @@ const Login = () => {
     <div className="container">
    <div className="login-content">
  <form autoComplete="off" onSubmit={handleSubmit}>
-        <h2>Login Form</h2>
+        <h2>Register Form</h2>
             <TextField 
                 label="Email"
                 onChange={e => setEmail(e.target.value)}
@@ -56,8 +47,8 @@ const Login = () => {
                 fullWidth
                 sx={{mb: 3}}
              />
-             <Button variant="outlined" color="secondary" type="submit" disabled={!email || !password}>Login</Button>
-             
+             <Button variant="outlined" color="secondary" type="submit" disabled={!email || !password}>Register</Button>
+             <small>if you have account <Link to="/login">Login</Link></small>
          
     </form>
 
@@ -68,4 +59,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Register

@@ -33,7 +33,7 @@ const Header = () => {
            <div className="icon-nav">
               <ul>
                 <li><Link to="/basket"><SlBasket/></Link></li>
-                <li><Link to="/login"><AiOutlineUser/></Link></li>
+                <li><Link to="/register"><AiOutlineUser/></Link></li>
                 <li><Link to=""><AiOutlineHeart/></Link></li>
               </ul>
            </div>

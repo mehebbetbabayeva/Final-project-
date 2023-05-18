@@ -10,6 +10,7 @@ import ShopCategory from "./pages/ShopCategory";
 import ProductDetail from "./pages/ProductDetail";
 import Login from "./pages/Login";
 import Button from "./components/Button";
+import Register from "./pages/Register";
 
 
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/shop-category" element={<ShopCategory />} />
         <Route path="/product-detail" element={<ProductDetail />} />
+        <Route path="/register" element={<Register/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/basket" element={<GiftCard/>} />
        </Routes>
