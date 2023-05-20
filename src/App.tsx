@@ -9,7 +9,6 @@ import ContactUs from "./pages/ContactUs";
 import ShopCategory from "./pages/ShopCategory";
 import ProductDetail from "./pages/ProductDetail";
 import Login from "./pages/Login";
-import Button from "./components/Button";
 import Register from "./pages/Register";
 
 

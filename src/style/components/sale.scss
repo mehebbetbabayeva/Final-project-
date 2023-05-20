@@ -1,6 +1,7 @@
 .sale{
     width: 100%;
     position: relative;
+    margin: 50px 0;
     img{
         width: 100%;
     }
@@ -31,5 +32,22 @@
        }
        
         
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:480px){
+    .sale{
+        position: static;
+        background-image: url("../../assets/img/offer-bg.png.webp");
+        img{
+            display: none;
+        }
+        .sale-title{
+            padding: 100px 0;
+            position: static;
+            h1{
+                font-size: 50px;
+            }
+        }
     }
 }

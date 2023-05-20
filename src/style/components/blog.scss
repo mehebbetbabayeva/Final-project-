@@ -55,3 +55,22 @@
         } 
     }
 }
+
+
+@media screen and (min-width:320px) and (max-width:480px){
+    .blog{
+       .container{
+        width: 90%;
+        .blog-content{
+            .blog-card-blog{
+                padding: 0;
+                flex-direction: column;
+                gap: 30px;
+                .blog-card{
+                    width: 100%;
+                }
+            }
+        }
+       }
+    }
+}

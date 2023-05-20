@@ -34,12 +34,5 @@ export const login = async (email,password)=>{
     }
 }
 
-export const logout = async ()=>{
-    try{
-     await signOut(auth)
-     return true
-    }catch(error){
-        toast.error(error.message)
-    }
-}
+
 export default app

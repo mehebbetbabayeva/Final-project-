@@ -36,3 +36,29 @@
         
     }
 }
+
+
+@media screen and (min-width:320px) and (max-width:480px){
+    
+   
+    .banner{
+        position: static;
+        min-height: 500px;
+        background-image: url("../../assets/img/banner-bg.jpg.webp");
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        .banner-title{
+            position: static;
+            width: 100%;
+            h2{
+                font-size: 30px;
+                width: 100%;
+                
+            }
+        }
+        img{
+         display: none;
+        }
+    }
+}

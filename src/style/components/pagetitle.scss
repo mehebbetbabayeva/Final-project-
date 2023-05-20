@@ -37,3 +37,21 @@
         }
     }
 }
+
+
+@media screen and (min-width:320px) and (max-width:480px){
+    .page--title{
+        .container{
+            width: 90%;
+            .page-title{
+                justify-content: center;
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+                .title-name{
+                    gap: 0px;
+                }
+            }
+        }
+    }
+}

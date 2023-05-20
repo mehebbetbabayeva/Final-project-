@@ -114,4 +114,25 @@ footer{
             }
         }
     }
-}}
+}
+}
+
+@media  screen and (min-width:320px) and (max-width:480px) {
+    footer{
+        .container{
+            width: 90%;
+            .footer-content{
+                .footer-features{
+                    flex-direction: column;
+                    .footer-card-group{
+                        width: 100%;
+                        flex-direction: column;
+                    }
+                }
+                .footer-social{
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

@@ -20,3 +20,18 @@
     }
 
 }
+
+
+@media screen and (min-width:320px) and (max-width:480px){
+    .track{
+        .container{
+            width: 90%;
+            .track-content{
+                width:100%;
+                input{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

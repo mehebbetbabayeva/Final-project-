@@ -109,3 +109,21 @@
         }
     }
 }
+
+
+@media screen and (min-width:320px) and (max-width:480px){
+    .product-price{
+        .container{
+            width: 90%;
+            .product-price-content{
+                table{
+                    
+
+                    .coupon-code{
+                        margin-left: -100px;
+                    }
+                }
+            }
+        }
+    }
+}
