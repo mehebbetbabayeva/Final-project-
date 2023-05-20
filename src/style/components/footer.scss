@@ -136,3 +136,28 @@ footer{
         }
     }
 }
+
+
+@media  screen and (min-width:481px) and (max-width:768px) {
+    footer{
+        .container{
+            width: 90%;
+            .footer-content{
+                .footer-features{
+                    flex-direction: column;
+                    .footer-card-group{
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: repeat(2,50%);
+                    }
+                    .footer-email{
+                       width: 60%;
+                    }
+                }
+                .footer-social{
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

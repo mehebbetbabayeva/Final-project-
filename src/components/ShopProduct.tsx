@@ -82,7 +82,7 @@ const ShopProduct = () => {
                 
                 </div>
                 <div className="shop-product-cards">
-                <Card sx={{ minWidth: 250 }}>
+                <Card sx={{ maxWidth: 250 }}>
      
       <CardMedia
         component="img"

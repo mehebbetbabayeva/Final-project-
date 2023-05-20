@@ -45,8 +45,16 @@
 @media screen and (min-width:320px) and (max-width:480px){
     .header-top{
         display: none;
-    }
-   
-   
-   
+    } 
+}
+
+@media screen and (min-width:481px) and (max-width:768px){
+    .header-top{
+        .container{
+            width: 80%;
+            .header-content-item2{
+                display: none;
+            }
+        }
+    } 
 }

@@ -13,7 +13,7 @@ const Product = () => {
         <div className="card-title">
          <div className="container">
             <div className="card-content">
-            <Card sx={{ minWidth: 250 }}>
+            <Card sx={{ maxWidth: 250 }}>
      
      <CardMedia
        component="img"
@@ -40,7 +40,7 @@ const Product = () => {
      </CardActions>
    
             </Card>
-            <Card sx={{ minWidth: 250 }}>
+            <Card sx={{ maxWidth: 250 }}>
      
      <CardMedia
        component="img"

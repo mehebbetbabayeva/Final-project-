@@ -4,9 +4,9 @@
     .card-content{
         width: 100%;
         height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(2,250px);
+        gap: 20px;
         
     }
 }
@@ -17,8 +17,21 @@
         .container{
             width: 90%;
             .card-content{
-                flex-direction: column;
+                display: grid;
+                grid-template-columns: repeat(2,250px);
                 gap: 20px;
+            }
+        }
+    }
+}
+@media screen and (min-width:481px) and (max-width:768px){
+    .card-title{
+        .container{
+            width: 90%;
+            .card-content{
+               display: grid;
+               grid-template-columns: repeat(2,250px);
+               gap: 20px;
             }
         }
     }

@@ -23,6 +23,24 @@
             width: 90%;
             .shop-product-content{
                 flex-direction: column-reverse;
+                .shop-product-radio-grp{
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px){
+    .shop-product{
+        .container{
+            width: 90%;
+            .shop-product-content{
+                flex-direction: column-reverse;
+                .shop-product-radio-grp{
+                    margin-top: 50px;
+                    
+                }
             }
         }
     }

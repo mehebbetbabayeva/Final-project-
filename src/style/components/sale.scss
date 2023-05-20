@@ -51,3 +51,21 @@
         }
     }
 }
+
+@media screen and (min-width:481px) and (max-width:768px){
+    .sale{
+        position: static;
+        background-image: url("../../assets/img/offer-bg.png.webp");
+        background-repeat: no-repeat;
+        img{
+            display: none;
+        }
+        .sale-title{
+            padding: 100px 0;
+            position: static;
+            h1{
+                font-size: 50px;
+            }
+        }
+    }
+}
