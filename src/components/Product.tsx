@@ -7,70 +7,26 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
-const Product = () => {
+import ProductsCard from './ProductsCard';
+
+const Product = ({products}:any) => {
+
+ 
+  
   return (
-    <div>
+  
         <div className="card-title">
          <div className="container">
-            <div className="card-content">
-            <Card sx={{ maxWidth: 250 }}>
-     
-     <CardMedia
-       component="img"
-       height="194"
-       image=""
-       alt="Paella dish"
-     />
-     <CardContent>
-       <Typography variant="body2" color="text.secondary">
-         This 
-       </Typography>
-       <Typography variant="body2" color="text.secondary">
-         <span>$250</span>
-       </Typography>
-     </CardContent>
-     <CardActions disableSpacing>
-       <IconButton aria-label="add to favorites">
-         <FavoriteIcon />
-       </IconButton>
-       <IconButton aria-label="LocalGroceryStoreIcon">
-      < LocalGroceryStoreIcon/>
-       </IconButton>
-       
-     </CardActions>
-   
-            </Card>
-            <Card sx={{ maxWidth: 250 }}>
-     
-     <CardMedia
-       component="img"
-       height="194"
-       image=""
-       alt="Paella dish"
-     />
-     <CardContent>
-       <Typography variant="body2" color="text.secondary">
-         This 
-       </Typography>
-       <Typography variant="body2" color="text.secondary">
-         <span>$250</span>
-       </Typography>
-     </CardContent>
-     <CardActions disableSpacing>
-       <IconButton aria-label="add to favorites">
-         <FavoriteIcon />
-       </IconButton>
-       <IconButton aria-label="LocalGroceryStoreIcon">
-      < LocalGroceryStoreIcon/>
-       </IconButton>
-       
-     </CardActions>
-   
-            </Card>
+            <div className="card-content"  >
+              {products.map((item:any)=>(
+                <ProductsCard key={item._id} product={item}/>
+               
+              ))}
+            
             </div>
          </div>
         </div>
-    </div>
+   
   )
 }
 

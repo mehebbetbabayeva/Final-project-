@@ -1,0 +1,77 @@
+.product-card{
+    width: 250px;
+    height: auto;
+    position: relative;
+    border: 1px solid #c5c1c1;
+    img{
+            height: 300px;
+            width: 100%;
+            object-fit: cover; 
+        }
+    h3{
+   
+    padding-left: 10px;
+    color: #4a4a4a;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    }
+    .card-price-group{
+        padding-left: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        align-items: center;
+        z-index: 2;
+        .price{
+            font-size: 20px;
+            font-weight: 500;
+            color: #2a2a2a;
+        }
+        .oldprice{
+            margin-left: 15px;
+    color: #797979;
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: line-through;
+        }
+    }
+    .card-hover{
+        width: 80%;
+        padding: 10px;
+        background-color: greenyellow;
+        position: absolute;
+        bottom: 70px;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        transition: all .2s ;
+        visibility: hidden;
+        
+         i{
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+                background-color: rgb(118, 184, 21);
+                color: white;
+            }
+         }
+    }
+    &:hover h3{
+        color: greenyellow;
+    }
+    &:hover .card-hover{
+        z-index: 1;
+        position: absolute;
+        bottom: 77px;
+        left: 20px;
+        transition: all .2s ;
+        visibility: visible;
+    }
+}

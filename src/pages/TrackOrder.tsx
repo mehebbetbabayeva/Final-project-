@@ -1,6 +1,7 @@
 import PageTitle from "../components/PageTitle";
-import Button from "../components/Button";
+import {Link} from "react-router-dom";
 const TrackOrder = () => {
+
   return (
     <>
      <PageTitle text="Order Tracking" />
@@ -10,7 +11,7 @@ const TrackOrder = () => {
         <p>To track your order please enter your Order ID in the box below and press the "Track" button. This was given to you on your receipt and in the confirmation email you should have received.</p>
         <input type="text" placeholder="Order ID" />
         <input type="email" placeholder="Billing Email Address" />
-        <Button text="TRACK ORDER"/>
+        <Link to="/register" className="green-btn">TRACK ORDER</Link>
       </div>
     </div>
      </div>

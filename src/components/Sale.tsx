@@ -8,7 +8,7 @@ const Sale = () => {
         <div className="sale-title">
             <h2>ALL MEN’S COLLECTION</h2>
             <h1>50% OFF</h1>
-            <Link to="/login" className="green-btn">DISCOVER NOW</Link>
+            <Link to="/register" className="green-btn">DISCOVER NOW</Link>
             <h3>Limited Time Offer</h3>
         </div>
     </div>

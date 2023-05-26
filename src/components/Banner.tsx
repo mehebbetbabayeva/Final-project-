@@ -10,7 +10,7 @@ const Banner = () => {
             <h1>MEN COLLECTION</h1>
             <h2>Show<span> Your Personal </span>Style</h2>
             <h3>Fowl saw dry which a above together place.</h3>
-             <Link to="/login" className="green-btn">VIEW COLLECTION</Link>
+             <Link to="/register" className="green-btn">VIEW COLLECTION</Link>
         </div>
     </div>
   )

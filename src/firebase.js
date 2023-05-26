@@ -1,7 +1,12 @@
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
+import 'firebase/compat/auth';
 
-import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut } from "firebase/auth";
 import toast  from "react-hot-toast";
+// import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
+
+
+
 
 const firebaseConfig = {
   apiKey:process.env.REACT_APP_API_KEY,
@@ -12,13 +17,15 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_ID
 };
 
+ const app = firebase.initializeApp(firebaseConfig);
+ const db = firebase.firestore();
+const auth = firebase.auth();
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth();
 
+export { firebase, auth,db  };
 export const register =async(email,password)=>{
  try{
-    const {user}=  await createUserWithEmailAndPassword(auth,email,password)
+    const {user}=  await auth.createUserWithEmailAndPassword(auth,email,password)
  return user
  }catch(error){
     toast.error(error.message)
@@ -27,12 +34,14 @@ export const register =async(email,password)=>{
 
 export const login = async (email,password)=>{
     try{
-     const {user}   =await signInWithEmailAndPassword(auth,email,password)
+     const {user}   =await auth.signInWithEmailAndPassword(auth,email,password)
      return user
     }catch(error){
         toast.error(error.message)
     }
 }
+
+
 
 
 export default app

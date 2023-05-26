@@ -4,18 +4,29 @@ import Sale from "../components/Sale";
 import Blog from "../components/Blog";
 import Product from "../components/Product";
 import Title from "../components/Title";
+import { useEffect ,useState} from "react";
+import { useLoaderData } from "react-router-dom";
+
+
 const HomePage = () => {
+  const [products,setProducts]= useState([])
+  const data:any = useLoaderData()
+  useEffect(()=>{
+    setProducts(data.data)
+  },[data])
+
+ 
   return (
     <>
     <Banner/>
     <Features/>
     <Title text="FEATURED PRODUCT"/>
-    <Product/>
+    <Product products={products}/>
     <Sale/>
     <Title text="NEW PRODUCTS"/>
-    <Product/>
+    <Product products={products}/>
     <Title text="INSPIRED PRODUCTS"/>
-    <Product/>
+    <Product products={products}/>
     <Blog/>
     
     </>
