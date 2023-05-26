@@ -3,13 +3,14 @@ import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
 import GiftCard from "./pages/GiftCard";
 import Footer from "./components/Footer";
-import { Routes,Route ,createBrowserRouter,Outlet,RouterProvider,ScrollRestoration} from "react-router-dom";
+import {createBrowserRouter,Outlet,RouterProvider,ScrollRestoration} from "react-router-dom";
 import TrackOrder from "./pages/TrackOrder";
 import ContactUs from "./pages/ContactUs";
 import ShopCategory from "./pages/ShopCategory";
 import ProductDetail from "./pages/ProductDetail";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+
 import { productsData } from "./api/Api";
 
 const Layout =()=>{

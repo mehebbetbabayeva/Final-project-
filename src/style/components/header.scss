@@ -153,6 +153,24 @@ header{
     
 }
 
+.icon-nav-basket{
+    position: relative;
+    span{
+        position: absolute;
+        top: -17px;
+        right: -14px;
+        background-color: black;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+    }
+}
+
 @media screen and (min-width:320px) and (max-width:480px){
     
     header{

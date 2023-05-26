@@ -6,15 +6,18 @@ import {BiMenu} from "react-icons/bi";
 
 import { MdClose} from "react-icons/md";
 import { useState } from 'react';
+import { useSelector } from "react-redux";
 const Header = () => {
+   const productData = useSelector((state:any)=>state.eiser.productData);
+   const favoriteData = useSelector((state:any)=>state.eiser.favoriteData);
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
     const handleButtonClick = () => {   
        setIsMenuOpen(!isMenuOpen);
        
       }
 
-     
-       const [pagesOpen, setIPagesOpen] = useState(false);
+     const [pagesOpen, setIPagesOpen] = useState(false);
        const openPagesMenu =()=>{
          setIPagesOpen(!pagesOpen)
        }
@@ -34,7 +37,6 @@ const Header = () => {
               <li className="shop"> <NavLink to="/shop-category">SHOP</NavLink>
               <ul className="shop-menu">
                 <li><Link to="/shop-category">SHOP CATEGORY</Link></li>
-                <li><Link to="/product-detail">PRODUCT DETAILS</Link></li>
                 <li><Link to="/shopping-card">SHOPPING CART</Link></li>
               </ul>
               </li>
@@ -48,9 +50,13 @@ const Header = () => {
            </nav>
            <div className="icon-nav">
               <ul>
-                <li><Link to="/basket"><SlBasket/></Link></li>
+                <li className="icon-nav-basket"><Link to="/basket"><SlBasket/>
+                <span>{productData.length}</span>
+                </Link></li>
                 <li><Link to="/register"><AiOutlineUser/></Link></li>
-                <li><Link to=""><AiOutlineHeart/></Link></li>
+                <li className="icon-nav-basket"><Link to="/favorite"><AiOutlineHeart/>
+                <span>{favoriteData.length}</span>
+                </Link></li>
               </ul>
            </div>
           

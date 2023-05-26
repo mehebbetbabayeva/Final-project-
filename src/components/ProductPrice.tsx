@@ -1,30 +1,20 @@
 import {IoIosArrowUp,IoIosArrowDown} from "react-icons/io";
 import card1 from "../assets/img/cart-1.jpg.webp";
 import Button from "../components/Button";
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
-import { useState } from "react";
-import TextField from '@mui/material/TextField';
+// import { useSelector } from "react-redux";
+
 
 
 
  
 const ProductPrice = () => {
-  const [state, setState] = useState('');
-  const handleChange = (event: SelectChangeEvent) => {
-    setState(event.target.value as string);
-  };
+  // const productData=useSelector((state:any)=>state.eiser.productData)
   return (
     <div className="product-price">
         <div className="container">
             <div className="product-price-content">
-                <table>
+              {/* {productData.map()} */}
+                {/* <table>
                      <thead>
                      <tr>
                       <th>Product</th>
@@ -110,7 +100,7 @@ const ProductPrice = () => {
                      </tr>
                     
                    </tbody>
-                </table>
+                </table> */}
             </div>
         </div>
     </div>
