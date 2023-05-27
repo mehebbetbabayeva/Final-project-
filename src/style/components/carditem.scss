@@ -1,0 +1,75 @@
+.card-item-content{
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    min-height: 500px;
+    height: auto;
+    margin: 30px 0;
+    .product-content{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .cancel-icon{
+            font-size: 30px;
+            cursor: pointer;
+            
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-title{
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            h2{
+                margin: 0;
+                padding: 0;
+                color: #797979;
+                font-size: 18px;
+            }
+            p{
+                font-size: 30px;
+            }
+        }
+        .quantity{
+            color: #555;
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            flex-direction: column;
+            gap: 10px;
+            p{
+                margin: 0;
+                padding: 0;
+                border: none;
+            }
+            .btn-group{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-left: 10px;
+                button{
+                    background-color: rgb(206, 195, 195);
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                }
+                span{
+                    font-size: 20px;
+                    color: black;
+                    margin: 0;
+                }
+            }
+        }
+        p{
+          
+            font-size: 30px;
+        }
+    }
+}

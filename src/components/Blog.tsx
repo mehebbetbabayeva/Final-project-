@@ -21,7 +21,7 @@ const Blog = () => {
                             </div>
                             <h1>Ford clever bed stops your sleeping partner hogging the whole</h1>
                             <p>Let one fifth i bring fly to divided face for bearing the divide unto seed winged divided light Forth</p>
-                            <Link to="">LEARN MORE <BsArrowRight/></Link>
+                            <Link to="/blog">LEARN MORE <BsArrowRight/></Link>
                         </div>
                     </div>
                     <div className="blog-card">
@@ -33,7 +33,7 @@ const Blog = () => {
                             </div>
                             <h1>Ford clever bed stops your sleeping partner hogging the whole</h1>
                             <p>Let one fifth i bring fly to divided face for bearing the divide unto seed winged divided light Forth</p>
-                            <Link to="">LEARN MORE <BsArrowRight/></Link>
+                            <Link to="/blog">LEARN MORE <BsArrowRight/></Link>
                         </div>
                     </div>
                     <div className="blog-card">
@@ -45,7 +45,7 @@ const Blog = () => {
                             </div>
                             <h1>Ford clever bed stops your sleeping partner hogging the whole</h1>
                             <p>Let one fifth i bring fly to divided face for bearing the divide unto seed winged divided light Forth</p>
-                            <Link to="">LEARN MORE <BsArrowRight/></Link>
+                            <Link to="/blog">LEARN MORE <BsArrowRight/></Link>
                         </div>
                     </div>
                 </div>

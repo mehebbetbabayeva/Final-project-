@@ -10,7 +10,8 @@ import ShopCategory from "./pages/ShopCategory";
 import ProductDetail from "./pages/ProductDetail";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-
+import Favorite from "./pages/Favorite";
+import Blog from "./components/Blog";
 import { productsData } from "./api/Api";
 
 const Layout =()=>{
@@ -71,7 +72,14 @@ const routers = createBrowserRouter([
         path:"/basket",
         element:<GiftCard/>
       },
-
+      {
+        path:"/favorite",
+        element:<Favorite/>
+      },
+      {
+        path:"/blog",
+        element:<Register/>
+      },
 
     ]
   }

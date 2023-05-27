@@ -3,7 +3,7 @@ import {login} from "../firebase";
 import { Toaster } from 'react-hot-toast';
 import { TextField, Button } from "@mui/material";
 import { useDispatch } from "react-redux/es/exports";
-import {login as loginHandle} from "../store/auth";
+import {login as loginHandle} from "../redux/auth";
 import { useNavigate } from "react-router-dom";
 const Login = () => {
     const navigate = useNavigate();

@@ -2,7 +2,7 @@ import {createSlice} from "@reduxjs/toolkit" ;
 const initialState ={
     productData:[],
     favoriteData:[],
-    userInfo:null,
+    user:false
 }
 
 export const eiserSlice = createSlice({
@@ -27,8 +27,16 @@ export const eiserSlice = createSlice({
             }
            
         },
+        resetFavoriteCart:(state)=>{
+            state.favoriteData=[]
+        },
         resetCart:(state)=>{
             state.productData=[]
+        },
+        deleteFavoriteCart:(state,action)=>{
+            state.favoriteData=state.favoriteData.filter(
+                (item)=>item._id !==action.payload
+            )
         },
         deleteCart:(state,action)=>{
             state.productData=state.productData.filter(
@@ -53,10 +61,10 @@ export const eiserSlice = createSlice({
                 item.quantity--
             }
         },
-
+       
     }
 })
 
 
-export const {addToCart,addToFavorite,resetCart,deleteCart,increamentQuantity,decrementQuantity}=  eiserSlice.actions;
+export const {addToCart,addToFavorite,resetCart,deleteCart,increamentQuantity,decrementQuantity,resetFavoriteCart,deleteFavoriteCart}=  eiserSlice.actions;
 export default eiserSlice.reducer;

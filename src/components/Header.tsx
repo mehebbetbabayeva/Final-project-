@@ -40,7 +40,7 @@ const Header = () => {
                 <li><Link to="/shopping-card">SHOPPING CART</Link></li>
               </ul>
               </li>
-              <li className="blog"><NavLink to="">BLOG</NavLink>
+              <li className="blog"><NavLink to="/blog">BLOG</NavLink>
               </li>
               <li className="page"> <NavLink to="/track-order">PAGES</NavLink>
       
