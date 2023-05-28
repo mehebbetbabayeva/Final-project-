@@ -5,16 +5,28 @@
         width: 100%;
         display: flex;
         .shop-product-radio-grp{
+            width: 30%;
             display: flex;
             flex-direction: column;
             gap: 20px;
-            margin-right: 20px;
+            
         }
         .shop-product-cards{
-
+            width: 70% ;
+            height: auto;
+            
         }
     }
 }
+.shop-products-title{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-flow: dense;
+    gap: 20px;
+}
+
 
 
 @media screen and (min-width:320px) and (max-width:480px){

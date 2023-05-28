@@ -1,4 +1,5 @@
 .card-title{
+    border: 1px solid red;
     width: 100%;
     height: auto;
     .card-content{
@@ -7,6 +8,8 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 30px;
+        grid-auto-flow: dense;
+      
         
     }
 }
