@@ -1,6 +1,6 @@
 header{
     position: fixed;
-    top: 0;
+    top: 40px;
     width: 100%;
     padding: 20px;
     
@@ -176,6 +176,26 @@ header{
     
 }
 
+#site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+   
+    transition: top 0.1s ;
+  }
+  
+  #site-header.visible {
+    top: 40px;
+  }
+
+  
+  
+  
+  
+  
+  
+  
 .icon-nav-basket{
     position: relative;
     span{
@@ -214,6 +234,9 @@ header{
             }
         }
     }
+    #site-header.visible {
+        top: 0;
+      }
 }
 @media screen and (min-width:481px) and (max-width:768px){
     header{
@@ -234,4 +257,7 @@ header{
             }
         }
     }
+    #site-header.visible {
+        top: 0;
+      }
 }

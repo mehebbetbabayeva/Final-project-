@@ -5,7 +5,7 @@ import {SlBasket} from "react-icons/sl";
 import {BiMenu} from "react-icons/bi";
 
 import { MdClose} from "react-icons/md";
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { useSelector } from "react-redux";
 
 
@@ -16,6 +16,29 @@ import { useSelector } from "react-redux";
 
 
 const Header = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [headerVisible, setHeaderVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentPosition = window.pageYOffset;
+      setScrollPosition(currentPosition);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
+  useEffect(() => {
+    if (scrollPosition > 100) {
+      setHeaderVisible(false);
+    } else {
+      setHeaderVisible(true);
+    }
+  }, [scrollPosition]);
+  //
    const productData = useSelector((state: any )=>state.eiser.productData);
    const favoriteData = useSelector((state: any)=>state.eiser.favoriteData);
 
@@ -31,7 +54,7 @@ const Header = () => {
        }
   return (
     <>
-    <header>
+    <header id="site-header" className={headerVisible ? 'visible' : ''}>
       <div className="container">
          <div className="header-content">
            <div className="header-logo">
