@@ -11,7 +11,7 @@ const Footer = () => {
     const [footerData, setFooterData] = useState<FooterData>({  email: '' });
   const handleSubmit = (e:FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(footerData);
+    localStorage.setItem('footerData', JSON.stringify(footerData));
     setFooterData({email: ''});
   };
  
@@ -67,7 +67,7 @@ const Footer = () => {
                         <h1>Newsletter</h1>
                          <h2>You can trust us. we only send promo offers</h2>
                          <form action=""  onSubmit={handleSubmit}>
-                            <input type="email" placeholder="Your Email Address" value={footerData.email} onChange={handleChange}/>
+                            <input type="email" placeholder="Your Email Address" value={footerData.email} onChange={handleChange} name="email"/>
                             <button>SUBSCRIBE</button>
                          </form>
                     </div>

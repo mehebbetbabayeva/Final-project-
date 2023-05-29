@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import CartItem from "../components/CartItem";
 import PageTitle from "../components/PageTitle";
 import {useState,useEffect} from "react"
+import { Link } from "react-router-dom";
 interface Product {
   _id: number;
   title: string;
@@ -44,7 +45,7 @@ setTotalAmt(price.toFixed(2).toString())
           
           Total:{"  "} <span>$ {totalAmt}</span>
         </p>
-        <button className="green-btn">PROCEED CHECKOUT</button>
+        <Link to="/register" className="green-btn">PROCEED CHECKOUT</Link>
       </div>
       </div>
      </div>

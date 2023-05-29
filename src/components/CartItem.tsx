@@ -15,12 +15,13 @@ const CartItem = () => {
               <div className='product-content'>
                 <GiCancel className='cancel-icon' onClick={()=>dispatch(deleteCart(item._id))}/>
                 <img src={item.image} alt="img" />
-                <div className="product-card-title">
+               <div className='cart-item-content'>
+               <div className="product-card-title">
                   <h2>{item.title}</h2>
                   <p>${item.price}</p>
                 </div>
                 <div className="quantity">
-                       <p>Quentity:</p>
+                     
                        <div className="btn-group">
                        <button onClick={()=>dispatch(decrementQuantity({
                         _id:item._id,
@@ -43,6 +44,7 @@ const CartItem = () => {
                        
                 </div>
                 <p>${item.quantity * item.price}</p>
+               </div>
               </div>
 
            </div>

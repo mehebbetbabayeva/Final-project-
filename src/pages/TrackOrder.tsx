@@ -10,7 +10,7 @@ const TrackOrder = () => {
   const [orderData, setOrderData] = useState<OrderData>({ order:'', orderemail: '' });
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(orderData);
+    localStorage.setItem('orderData', JSON.stringify(orderData));
     setOrderData({ order:'', orderemail: '' });
   };
  
@@ -28,7 +28,7 @@ const TrackOrder = () => {
         <p>To track your order please enter your Order ID in the box below and press the "Track" button. This was given to you on your receipt and in the confirmation email you should have received.</p>
         <input type="text" placeholder="Order ID" name="order" value={orderData.order} onChange={handleChange}/>
         <input type="email" placeholder="Billing Email Address" name="orderemail" value={orderData.orderemail} onChange={handleChange} />
-        <Link to="/register" className="green-btn">TRACK ORDER</Link>
+        <button className="green-btn">TRACK ORDER</button>
       </form>
     </div>
      </div>

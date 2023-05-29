@@ -23,7 +23,7 @@ const ContactUs = () => {
   const [formData, setFormData] = useState<FormData>({ message:'',name: '', email: '',subject:'' });
   const handleSubmit = (e:React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
+    localStorage.setItem('formData', JSON.stringify(formData));
     setFormData({ message: '', name: '', email: '', subject: '' });
   };
  

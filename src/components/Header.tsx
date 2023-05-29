@@ -43,7 +43,6 @@ const Header = () => {
               <li><NavLink to="/"  >HOME</NavLink></li>
               <li className="shop"> <NavLink to="/shop-category">SHOP</NavLink>
               <ul className="shop-menu">
-                <li><Link to="/shop-category" >SHOP CATEGORY</Link></li>
                 <li><Link to="/shopping-card" >SHOPPING CART</Link></li>
               </ul>
               </li>
@@ -91,7 +90,7 @@ const Header = () => {
                   <li className="shop"> <NavLink to="/shop-category" onClick={openPagesMenu}>SHOP</NavLink>
                   {pagesOpen &&(
                   <ul className="shop-menu">
-                    <li><Link to="/shop-category">SHOP CATEGORY</Link></li>
+                   
                     <li><Link to="/shopping-card">SHOPPING CART</Link></li>
                   </ul>
                     )}
