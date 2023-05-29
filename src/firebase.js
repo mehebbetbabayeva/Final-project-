@@ -9,12 +9,12 @@ import toast  from "react-hot-toast";
 
 
 const firebaseConfig = {
-  apiKey:process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_ID
+  apiKey: "AIzaSyBN_BtRMziUC_rNa99RqAsKWq5eZczxvbE",
+  authDomain: "my-final-project-commerce.firebaseapp.com",
+  projectId: "my-final-project-commerce",
+  storageBucket:  "my-final-project-commerce.appspot.com",
+  messagingSenderId: "254179877253",
+  appId: "1:254179877253:web:a3eef5b1feeef2c36fa4ec",
 };
 
  const app = firebase.initializeApp(firebaseConfig);
