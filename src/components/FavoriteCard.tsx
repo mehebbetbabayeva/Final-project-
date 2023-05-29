@@ -7,7 +7,7 @@ const FavoriteCard = () => {
     const dispatch= useDispatch();
     const favoriteData = useSelector((state:any)=>state.eiser.favoriteData);
   return (
-    <div className='card-item-content'>
+    <div className='card-item-content' >
     {favoriteData.map((item:any)=>(
        <div key={item._id} >
           <div className='product-content'>

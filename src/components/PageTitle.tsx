@@ -6,7 +6,7 @@ interface TitleNameProps{
 
 const PageTitle = (props:TitleNameProps) => {
   return (
-   <div className="page--title">
+   <div className="page--title" style={{marginTop:"80px"}}>
      <div className="container">
       <div className='page-title'>
         <div className="title-name">

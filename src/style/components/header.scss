@@ -1,6 +1,6 @@
 header{
     position: fixed;
-    top: 40px;
+   
     width: 100%;
     padding: 20px;
     
@@ -181,12 +181,12 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-   
     transition: top 0.1s ;
   }
   
   #site-header.visible {
     top: 40px;
+    
   }
 
   

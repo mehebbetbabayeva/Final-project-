@@ -54,7 +54,7 @@ const Header = () => {
        }
   return (
     <>
-    <header id="site-header" className={headerVisible ? 'visible' : ''}>
+    <header id="site-header" className={headerVisible ? 'visible' : ''} >
       <div className="container">
          <div className="header-content">
            <div className="header-logo">
