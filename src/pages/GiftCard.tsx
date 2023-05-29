@@ -2,23 +2,33 @@ import { useSelector } from "react-redux";
 import CartItem from "../components/CartItem";
 import PageTitle from "../components/PageTitle";
 import {useState,useEffect} from "react"
-
+interface Product {
+  _id: number;
+  title: string;
+  price: number;
+  oldPrice:number;
+  category:string;
+  quantity: number;
+  image:string;
+  
+}
 
 const GiftCard = () => {
-  const productData= useSelector((state:any)=>state.eiser.productData)
+  const productData= useSelector((state:{ eiser: { productData: Product[] } })=>state.eiser.productData)
   const [totalAmt,setTotalAmt]=useState("")
   useEffect(()=>{
 let price= 0;
-productData.map((item:any)=>{
+productData.map((item)=>{
 price += item.price * item.quantity;
 return price
 });
 setTotalAmt(price.toFixed(2).toString())
   },[productData])
   return (
-    <>
+    <div>
       <PageTitle text="Cart" />
-      <div className="container" style={{display:"flex"}}>
+     <div className="gift-card-content">
+     <div className="container" style={{display:"flex"}}>
       <CartItem/>
       <div className="product-total">
         <h2>Cart totals</h2>
@@ -37,7 +47,8 @@ setTotalAmt(price.toFixed(2).toString())
         <button className="green-btn">PROCEED CHECKOUT</button>
       </div>
       </div>
-    </>
+     </div>
+    </div>
   )
 }
 

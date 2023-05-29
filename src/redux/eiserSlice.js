@@ -9,6 +9,7 @@ export const eiserSlice = createSlice({
     name:"eiser",
     initialState,
     reducers:{
+       
         addToCart:(state,action)=>{
             const item = state.productData.find((item)=>item._id===action.payload._id);
             if(item){

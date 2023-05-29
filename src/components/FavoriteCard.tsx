@@ -13,7 +13,7 @@ const FavoriteCard = () => {
           <div className='product-content'>
             <GiCancel className='cancel-icon' onClick={()=>dispatch(deleteFavoriteCart(item._id))}/>
             <img src={item.image} alt="img" />
-            <div className="card-title">
+            <div className="product-card-title">
               <h2>{item.title}</h2>
               <p>${item.price}</p>
             </div>

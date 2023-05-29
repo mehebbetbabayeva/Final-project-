@@ -5,12 +5,13 @@ import { TextField, Button } from "@mui/material";
 import { useDispatch } from "react-redux/es/exports";
 import {login as loginHandle} from "../redux/auth";
 import { useNavigate } from "react-router-dom";
+import { FormEvent } from 'react';
 const Login = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const [email,setEmail]=useState('');
-    const [password,setPassword] = useState('');
-    const handleSubmit =async( e:any) =>{
+    const [email,setEmail]=useState<string>('');
+    const [password,setPassword] = useState<string>('');
+    const handleSubmit =async( e: FormEvent<HTMLFormElement>) =>{
       e.preventDefault()
         const user = await login (email,password)
         dispatch(loginHandle(user))

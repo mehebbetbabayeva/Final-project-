@@ -3,12 +3,12 @@ import {register} from "../firebase";
 import { Toaster } from 'react-hot-toast';
 import { TextField, Button } from "@mui/material";
 import { Link } from "react-router-dom";
-
+import { FormEvent } from 'react';
 const Register = () => {
  
-  const [email,setEmail]=useState('');
-  const [password,setPassword] = useState('');
-  const handleSubmit =async( e:any) =>{
+  const [email,setEmail]=useState<string>('');
+  const [password,setPassword] = useState<string>('');
+  const handleSubmit =async( e:FormEvent<HTMLFormElement>) =>{
     e.preventDefault()
       const user = await register (email,password)
       console.log(user)

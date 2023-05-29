@@ -12,3 +12,19 @@
         }
     }
 }
+
+
+@media screen and (min-width:320px) and (max-width:768px){
+    .login{
+        
+        .container{
+            width: 100%;
+            .login-content{
+                form{
+                    width: 100%;
+                    padding:10px
+                }
+            }
+        }
+    }
+}

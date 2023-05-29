@@ -4,7 +4,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import ShopProductCards from './ShopProductCards';
-import { useEffect ,useState} from "react";
+import { useEffect ,useState,ChangeEvent} from "react";
 import { useLoaderData } from "react-router-dom";
 
 const formstyle={
@@ -31,6 +31,88 @@ const ShopProduct = () => {
   },[data])
 
 
+  const [selectedCategory, setSelectedCategory] = useState("allCategory");
+  const [selectedClothes, setSelectedClothes] = useState("allClothes");
+  const [selectedColor, setSelectedColor] = useState("allColor");
+    const handleCategoryChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setSelectedCategory(e.target.value);
+  };
+
+  const handleClothesChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setSelectedClothes(e.target.value);
+  };
+
+  const handleColorChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setSelectedColor(e.target.value);
+  };
+const checkColorInTitle = (title: string, color: string): boolean => {
+  const colors: { [key: string]: string[] } = {
+    blue: ["blue","lightblue"],
+    khakhi: ["khakhi"],
+    black: ["black"],
+    red: ["red"],
+    pink: ["pink"],
+    yellow: ["yellow"],
+  };
+
+  const colorKeys = Object.keys(colors);
+  for (let i = 0; i < colorKeys.length; i++) {
+    const key = colorKeys[i];
+    const variations = colors[key];
+    for (let j = 0; j < variations.length; j++) {
+      if (title.toLowerCase().includes(variations[j])) {
+        if (key === color.toLowerCase()) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    }
+  }
+
+  return false;
+};
+
+const checkClothesInTitle = (title: string, clothes: string): boolean => {
+  const clotheses: { [key: string]: string[] } = {
+    jacket: ["jacket"],
+    tshirt: ["t-shirt"],
+    jeans: ["jeans","jins"],
+    velvet: ["velvet"],
+    hoody: ["hoody"],
+     tops: ["tops"],
+  };
+
+  const clothesKeys = Object.keys(clotheses);
+  for (let i = 0; i < clothesKeys.length; i++) {
+    const key = clothesKeys[i];
+    const variations = clotheses[key];
+    for (let j = 0; j < variations.length; j++) {
+      if (title.toLowerCase().includes(variations[j])) {
+        if (key === clothes.toLowerCase()) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    }
+  }
+
+  return false;
+};
+
+  const filteredProducts = products.filter((product:any) => {
+    const categoryMatch =
+      selectedCategory === "allCategory" ||
+      product.category.toLowerCase() === selectedCategory.toLowerCase();
+  const clothesMatch =
+     selectedClothes === "allClothes" || checkClothesInTitle(product.title, selectedClothes);
+    const colorMatch = selectedColor === "allColor" || checkColorInTitle(product.title, selectedColor);
+    return categoryMatch && clothesMatch && colorMatch;
+  });
+
+
+
 
   return (
     <div className="shop-product">
@@ -40,39 +122,57 @@ const ShopProduct = () => {
                 <FormControl style={formstyle}>
       <FormLabel id="demo-radio-buttons-group-label" style={categories}>Categories</FormLabel>
       <RadioGroup
-        aria-labelledby="demo-radio-buttons-group-label"
+         aria-labelledby="category-label"
         defaultValue="Browse Categories"
         name="radio-buttons-group"
+        value={selectedCategory}
+        onChange={handleCategoryChange}
+
+      
+      
       >
-        <FormControlLabel value="Female" control={<Radio />} label="Female" />
-        <FormControlLabel value="Man" control={<Radio />} label="Man" />
-        <FormControlLabel value="Kids" control={<Radio />} label="Kids" />
+        <FormControlLabel value="allCategory" control={<Radio />} label="All"  />
+        <FormControlLabel value="women" control={<Radio />} label="Woman"  />
+        <FormControlLabel value="men" control={<Radio />} label="Man"   />
+        <FormControlLabel value="kids" control={<Radio />} label="Kids"   />
       </RadioGroup>
                 </FormControl>
                 <FormControl style={formstyle}>
-      <FormLabel id="demo-radio-buttons-group-label" style={categories}>Size Filter</FormLabel>
+      <FormLabel id="demo-radio-buttons-group-label" style={categories}>Clothes Filter</FormLabel>
       <RadioGroup
-        aria-labelledby="demo-radio-buttons-group-label"
-        defaultValue="size filter"
+        aria-labelledby="clothes-label"
+        defaultValue="clothes filter"
         name="radio-buttons-group"
+        value={selectedClothes}
+        onChange={handleClothesChange}
+
       >
-        <FormControlLabel value="xs" control={<Radio />} label="XS" />
-        <FormControlLabel value="s" control={<Radio />} label="S" />
-        <FormControlLabel value="m" control={<Radio />} label="M" />
-        <FormControlLabel value="l" control={<Radio />} label="L" />
-        <FormControlLabel value="xl" control={<Radio />} label="XL" />
-        <FormControlLabel value="xxl" control={<Radio />} label="XXL" />
+        <FormControlLabel value="allClothes" control={<Radio />} label="All" />
+        <FormControlLabel value="jacket" control={<Radio />} label="Jacket" />
+        <FormControlLabel value="tshirt" control={<Radio />} label="T-shirt" />
+        <FormControlLabel value="hoody" control={<Radio />} label="Hoody" />
+        <FormControlLabel value="velvet" control={<Radio />} label="Velvet" />
+        <FormControlLabel value="jeans" control={<Radio />} label="Jeans" />
+        <FormControlLabel value="tops" control={<Radio />} label="Tops" />
       </RadioGroup>
                 </FormControl>
                 <FormControl style={formstyle}>
       <FormLabel id="demo-radio-buttons-group-label" style={categories}>Color Filter</FormLabel>
       <RadioGroup
-        aria-labelledby="demo-radio-buttons-group-label"
+      
         defaultValue="Color Filter"
         name="radio-buttons-group"
+        aria-labelledby="color-label"
+        value={selectedColor}
+        onChange={handleColorChange}
+
+      
       >
+        
+
+        <FormControlLabel value="allColor" control={<Radio />} label="All" />
         <FormControlLabel value="blue" control={<Radio />} label="Blue" />
-        <FormControlLabel value="gray" control={<Radio />} label="Gray" />
+        <FormControlLabel value="khakhi" control={<Radio />} label="Khakhi" />
         <FormControlLabel value="black" control={<Radio />} label="Black" />
         <FormControlLabel value="red" control={<Radio />} label="Red" />
         <FormControlLabel value="pink" control={<Radio />} label="Pink" />
@@ -82,8 +182,7 @@ const ShopProduct = () => {
                 
                 </div>
                 <div className="shop-product-cards">
-                 <ShopProductCards products={products} />
-                
+                 <ShopProductCards products={filteredProducts} />                
                 </div>
             </div>
         </div>

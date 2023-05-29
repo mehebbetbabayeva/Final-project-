@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import {persistStore,persistReducer,FLUSH,REHYDRATE,PAUSE,PERSIST,PURGE,REGISTER} from "redux-persist";
+import {persistStore,persistReducer,FLUSH,REHYDRATE,PAUSE,PERSIST,PURGE,REGISTER } from "redux-persist";
 import  storage  from 'redux-persist/lib/storage';
 import eiserSlice from './eiserSlice';
 import auth from './auth';
@@ -15,6 +15,7 @@ export const  store=configureStore({
   reducer: {
     eiser: persistedReducer,
     auth,
+    
   },
   middleware:(getDefaultMiddleware)=>
   getDefaultMiddleware({

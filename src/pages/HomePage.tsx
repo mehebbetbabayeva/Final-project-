@@ -6,10 +6,19 @@ import Product from "../components/Product";
 import Title from "../components/Title";
 import { useEffect ,useState} from "react";
 import { useLoaderData } from "react-router-dom";
-
+interface Products {
+  _id: number;
+  title: string;
+  price: number;
+  oldPrice:number;
+  category:string;
+  quantity: number;
+  image:string;
+  
+}
 
 const HomePage = () => {
-  const [products,setProducts]= useState([])
+  const [products,setProducts]= useState<Products[]>([])
   const data:any = useLoaderData()
   useEffect(()=>{
     setProducts(data.data)

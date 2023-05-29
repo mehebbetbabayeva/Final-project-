@@ -11,21 +11,46 @@ import HouseIcon from '@mui/icons-material/House';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import Divider from '@mui/material/Divider';
+import { useState } from 'react';
+
+interface FormData {
+  message: string;
+  name: string;
+  email: string;
+  subject: string;
+}
 const ContactUs = () => {
+  const [formData, setFormData] = useState<FormData>({ message:'',name: '', email: '',subject:'' });
+  const handleSubmit = (e:React.FormEvent) => {
+    e.preventDefault();
+    console.log(formData);
+    setFormData({ message: '', name: '', email: '', subject: '' });
+  };
+ 
+  const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+ 
+  };
+  const handleTextChange = (e:React.ChangeEvent<HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+ 
+  };
+
   return (
+    
     <>
       <PageTitle text="Contact Us"/>
       <div className="contact-us">
         <div className="container">
           <div className="contact-us-content">
-            <form action="">
+            <form action=""  onSubmit={handleSubmit}>
               <h1>Get in Touch</h1>
-              <textarea name="" id="" placeholder="Enter Message"></textarea>
+              <textarea   placeholder="Enter Message" name="message" value={formData.message} onChange={handleTextChange}></textarea>
               <div className="input-grp">
-                <input type="text" placeholder="Enter your name"/>
-                <input type="email" placeholder="Enter your email"/>
+                <input type="text" placeholder="Enter your name" name="name" value={formData.name} onChange={handleChange}/>
+                <input type="email" placeholder="Enter your email" name="email" value={formData.email} onChange={handleChange}/>
               </div>
-              <input type="text" placeholder="Enter your subject"/>
+              <input type="text" placeholder="Enter your subject"  name="subject" value={formData.subject} onChange={handleChange}/>
               <Button text="SEND MESSAGE"/>
             </form>
             <div className="contact">

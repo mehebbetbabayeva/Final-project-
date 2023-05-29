@@ -1,7 +1,19 @@
 
 import ProductsCard from './ProductsCard';
 
-const Product = ({products}:any) => {
+
+interface Product {
+  _id: number;
+  title: string;
+  price: number;
+  oldPrice:number;
+  category:string;
+  quantity: number;
+  image:string;
+  
+}
+
+const Product = ({ products }: { products: Product[] }) => {
 
  
   
@@ -10,7 +22,7 @@ const Product = ({products}:any) => {
         <div className="card-title">
          <div className="container">
             <div className="card-content"  >
-              {products.map((item:any)=>(
+              {products.map((item)=>(
                 <ProductsCard key={item._id} product={item}/>
                
               ))}

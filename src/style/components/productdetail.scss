@@ -75,3 +75,23 @@
         }
     }
 }
+
+
+@media screen and (min-width:320px) and (max-width:768px){
+    .product-detail{
+       
+        .container{
+            width: 100%;
+            .product-detail-content{
+                flex-direction: column;
+                height: auto;
+                .detail-image{
+                    width: 100%;
+                }
+                .detail{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

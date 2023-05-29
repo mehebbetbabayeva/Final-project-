@@ -1,6 +1,15 @@
 import ProductsCard from './ProductsCard';
-
-const ShopProductCards = ({products}:any) => {
+interface Product {
+  _id: number;
+  title: string;
+  price: number;
+  oldPrice:number;
+  category:string;
+  quantity: number;
+  image:string;
+  
+}
+const ShopProductCards = ({ products }: { products: Product[] }) => {
   return (
     <div className="shop-products-title">
        

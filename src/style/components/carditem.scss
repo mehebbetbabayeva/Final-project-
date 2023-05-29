@@ -21,7 +21,7 @@
             height: 200px;
             object-fit: cover;
         }
-        .card-title{
+        .product-card-title{
             width: 200px;
             display: flex;
             flex-direction: column;
@@ -71,5 +71,17 @@
           
             font-size: 30px;
         }
+    }
+}
+
+
+@media screen and (min-width:320px) and (max-width:768px){
+    .card-item-content{
+      width: 100%;
+      padding: 10px;
+      .product-content{
+        
+        flex-direction: column;
+      }
     }
 }
