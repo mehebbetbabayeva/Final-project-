@@ -38,6 +38,10 @@
                 .shop-product-radio-grp{
                     margin-top: 50px;
                 }
+                .shop-product-cards{
+                    width: 100%;
+                    
+                }
             }
         }
     }
@@ -51,7 +55,11 @@
                 flex-direction: column-reverse;
                 .shop-product-radio-grp{
                     margin-top: 50px;
-                    
+                }
+                .shop-product-cards{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
                 }
             }
         }

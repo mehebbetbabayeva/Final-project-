@@ -11,7 +11,7 @@ const Favorite = () => {
     <div>
       
       <PageTitle text="Favourite" />
-      <div className="container" style={{display:"flex"}}>
+      <div className="container" style={{display:"flex",width:"90%"}}>
       <FavoriteCard/>
       
       </div>
