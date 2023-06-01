@@ -102,6 +102,7 @@ const checkClothesInTitle = (title: string, clothes: string): boolean => {
 };
 
   const filteredProducts = products.filter((product:any) => {
+    
     const categoryMatch =
       selectedCategory === "allCategory" ||
       product.category.toLowerCase() === selectedCategory.toLowerCase();

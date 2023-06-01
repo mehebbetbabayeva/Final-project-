@@ -1,10 +1,23 @@
 import {createSlice} from "@reduxjs/toolkit" ;
-const initialState ={
-    productData:[],
-    favoriteData:[],
-    user:false
-}
-
+const initialState: {
+    productData: { _id: string, quantity: number }[],
+    favoriteData: { _id: string, quantity: number }[],
+    user: boolean
+  } = {
+    productData: [],
+    favoriteData: [],
+    user: false
+  };
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 export const eiserSlice = createSlice({
     name:"eiser",
     initialState,
@@ -53,14 +66,14 @@ export const eiserSlice = createSlice({
             }
         },
         decrementQuantity:(state,action)=>{
-            const item = state.productData.find(
-                (item)=>item._id ===action.payload._id
-            );
-            if(item.quantity===1){
-                item.quantity=1;
-            }else{
-                item.quantity--
+            const item = state.productData.find((item) => item._id === action.payload._id);
+            if (item) {
+            if (item.quantity === 1) {
+            item.quantity = 1;
+            } else {
+            item.quantity--;
             }
+           }
         },
        
     }
