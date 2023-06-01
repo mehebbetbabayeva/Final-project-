@@ -23,21 +23,23 @@ const auth = firebase.auth();
 
 
 export { firebase, auth,db  };
-export const register =async(email,password)=>{
- try{
-    const {user}=  await auth.createUserWithEmailAndPassword(auth,email,password)
- return user
- }catch(error){
-    toast.error(error.message)
- }
+export const register =async(email: string, password: string)=>{
+
+try {
+  const { user } = await auth.createUserWithEmailAndPassword(email, password);
+  return user;
+} catch (error: any) {
+  toast.error(error.message);
+}
 }
 
-export const login = async (email,password)=>{
-    try{
-     const {user}   =await auth.signInWithEmailAndPassword(auth,email,password)
-     return user
-    }catch(error){
-        toast.error(error.message)
+
+export const login = async (email: string, password: string)=>{
+    try {
+      const { user } = await auth.signInWithEmailAndPassword(email, password);
+      return user;
+    } catch (error:any) {
+      toast.error(error.message);
     }
 }
 
