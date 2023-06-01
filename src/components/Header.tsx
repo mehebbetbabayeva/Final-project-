@@ -116,7 +116,7 @@ const Header = () => {
                   <li className="shop" > <NavLink to="" onClick={openPagesMenu}>SHOP</NavLink>
                   {pagesOpen &&(
                   <ul className="shop-menu">
-                   <li onClick={handleMenuItemClick}><Link to="/shop-category">SHOP CATEGORY</Link></li>
+                   <li onClick={handleMenuItemClick}><Link to="/shopping-category">SHOP CATEGORY</Link></li>
                     <li onClick={handleMenuItemClick}><Link to="/shopping-card">SHOP CART</Link></li>
                   </ul>
                     )}

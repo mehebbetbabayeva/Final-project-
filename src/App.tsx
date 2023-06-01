@@ -57,7 +57,7 @@ const routers = createBrowserRouter([
         element:<ContactUs/>
       },
       {
-        path:"/shop-category",
+        path:"/shopping-category",
         element:<ShopCategory/>,
         loader:productsData,
       },
